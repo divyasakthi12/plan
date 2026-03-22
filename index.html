@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pretty Planner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── TOP SECTION ── -->
+  <header>
+    <h1>Pretty Planner</h1>
+    <div class="stats-row">
+      <div class="stat-card">
+        <span class="stat-label">Daily Progress</span>
+        <span class="stat-value" id="daily-progress">0%</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Tasks Completed</span>
+        <span class="stat-value" id="tasks-completed">0</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Weekly Progress</span>
+        <span class="stat-value" id="weekly-progress">0%</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Streak</span>
+        <span class="stat-value" id="streak">0 days</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── MAIN GRID ── -->
+  <div class="main-wrapper">
+    <section class="grid-section">
+      <div id="month-selector">
+        <button class="month-btn" data-month="March">March</button>
+        <button class="month-btn" data-month="April">April</button>
+        <button class="month-btn" data-month="May">May</button>
+        <button class="month-btn" data-month="June">June</button>
+        <button class="month-btn" data-month="July">July</button>
+      </div>
+      <div class="table-scroll">
+        <table class="planner-table">
+          <thead>
+            <tr id="date-header-row">
+              <th class="subject-header">Time Slot</th>
+              <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th>
+              <th>6</th><th>7</th><th>8</th><th>9</th><th>10</th>
+              <th>11</th><th>12</th><th>13</th><th>14</th><th>15</th>
+              <th>16</th><th>17</th><th>18</th><th>19</th><th>20</th>
+              <th>21</th><th>22</th><th>23</th><th>24</th><th>25</th>
+              <th>26</th><th>27</th><th>28</th><th>29</th><th>30</th>
+              <th>31</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- EARLY MORNING -->
+            <tr class="section-label-row"><td class="section-label" colspan="32">EARLY MORNING</td></tr>
+            <tr data-row="0"><td class="subject-cell">6:00 – 7:00 &nbsp; DSA learning + LeetCode</td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td></tr>
+
+            <!-- COLLEGE STUDY TIME -->
+            <tr class="section-label-row"><td class="section-label" colspan="32">COLLEGE STUDY TIME (ON DUTY)</td></tr>
+            <tr data-row="1"><td class="subject-cell">9:00 – 10:30 &nbsp; Java learning</td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td></tr>
+            <tr data-row="2"><td class="subject-cell">10:30 – 11:30 &nbsp; Internship work</td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td></tr>
+            <tr data-row="3"><td class="subject-cell">11:30 – 12:30 &nbsp; Java practice (HackerRank)</td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td></tr>
+            <tr data-row="4"><td class="subject-cell">1:30 – 2:30 &nbsp; DSA learning</td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td></tr>
+            <tr data-row="5"><td class="subject-cell">2:30 – 3:30 &nbsp; LeetCode practice</td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td></tr>
+            <tr data-row="6"><td class="subject-cell">3:30 – 4:30 &nbsp; Backend / Project dev</td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td></tr>
+
+            <!-- EVENING STUDY TIME -->
+            <tr class="section-label-row"><td class="section-label" colspan="32">EVENING STUDY TIME</td></tr>
+            <tr data-row="7"><td class="subject-cell">6:30 – 7:30 &nbsp; Core subject learning</td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td></tr>
+            <tr data-row="8"><td class="subject-cell">7:30 – 8:30 &nbsp; Database learning</td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td></tr>
+            <tr data-row="9"><td class="subject-cell">9:00 – 10:00 &nbsp; Backend / Project planning</td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td></tr>
+            <tr data-row="10"><td class="subject-cell">10:00 – 11:00 &nbsp; Interview / System Design / NPTEL</td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <!-- ── SUBJECT PROGRESS (below grid) ── -->
+  <section class="progress-panel">
+    <h2>Subject Progress</h2>
+    <ul class="progress-list">
+      <li>
+        <div class="prog-header">
+          <span class="prog-subject subject-link" data-subject="Java">Java</span>
+          <button class="notepad-btn" data-subject="Java" title="Open Notepad">📝</button>
+          <span class="prog-pct">0%</span>
+        </div>
+        <div class="prog-bar-wrap"><div class="prog-bar" style="width:0%"></div></div>
+      </li>
+      <li>
+        <div class="prog-header">
+          <span class="prog-subject subject-link" data-subject="DSA">DSA</span>
+          <button class="notepad-btn" data-subject="DSA" title="Open Notepad">📝</button>
+          <span class="prog-pct">0%</span>
+        </div>
+        <div class="prog-bar-wrap"><div class="prog-bar" style="width:0%"></div></div>
+      </li>
+      <li>
+        <div class="prog-header">
+          <span class="prog-subject subject-link" data-subject="Database">Database</span>
+          <button class="notepad-btn" data-subject="Database" title="Open Notepad">📝</button>
+          <span class="prog-pct">0%</span>
+        </div>
+        <div class="prog-bar-wrap"><div class="prog-bar" style="width:0%"></div></div>
+      </li>
+      <li>
+        <div class="prog-header">
+          <span class="prog-subject subject-link" data-subject="Backend">Backend</span>
+          <button class="notepad-btn" data-subject="Backend" title="Open Notepad">📝</button>
+          <span class="prog-pct">0%</span>
+        </div>
+        <div class="prog-bar-wrap"><div class="prog-bar" style="width:0%"></div></div>
+      </li>
+      <li>
+        <div class="prog-header">
+          <span class="prog-subject subject-link" data-subject="Project">Project</span>
+          <button class="notepad-btn" data-subject="Project" title="Open Notepad">📝</button>
+          <span class="prog-pct">0%</span>
+        </div>
+        <div class="prog-bar-wrap"><div class="prog-bar" style="width:0%"></div></div>
+      </li>
+      <li>
+        <div class="prog-header">
+          <span class="prog-subject subject-link" data-subject="Core">Core</span>
+          <button class="notepad-btn" data-subject="Core" title="Open Notepad">📝</button>
+          <span class="prog-pct">0%</span>
+        </div>
+        <div class="prog-bar-wrap"><div class="prog-bar" style="width:0%"></div></div>
+      </li>
+      <li>
+        <div class="prog-header">
+          <span class="prog-subject subject-link" data-subject="System Design">System Design</span>
+          <button class="notepad-btn" data-subject="System Design" title="Open Notepad">📝</button>
+          <span class="prog-pct">0%</span>
+        </div>
+        <div class="prog-bar-wrap"><div class="prog-bar" style="width:0%"></div></div>
+      </li>
+      <li>
+        <div class="prog-header">
+          <span class="prog-subject subject-link" data-subject="Interview">Interview</span>
+          <button class="notepad-btn" data-subject="Interview" title="Open Notepad">📝</button>
+          <span class="prog-pct">0%</span>
+        </div>
+        <div class="prog-bar-wrap"><div class="prog-bar" style="width:0%"></div></div>
+      </li>
+    </ul>
+    <div class="overall-completion">
+      <span>Overall Completion</span>
+      <span class="overall-pct">0%</span>
+    </div>
+  </section>
+
+  <!-- ── PLANNER SIDE PANEL ── -->
+  <div id="planner-overlay" class="hidden"></div>
+  <div id="planner-panel" class="hidden">
+    <div class="panel-header">
+      <div id="breadcrumb"></div>
+      <button id="panel-close">✕ Close</button>
+    </div>
+    <div id="panel-body"></div>
+  </div>
+
+  <!-- ── NOTEPAD MODAL ── -->
+  <div id="notepad-overlay" class="hidden">
+    <div id="notepad">
+
+      <!-- Step 1: Mode select -->
+      <div id="step-mode">
+        <div class="notepad-header">
+          <span id="notepad-subject-title"></span>
+          <button class="close-btn" id="notepad-close">✕</button>
+        </div>
+        <p class="step-hint">Select a mode</p>
+        <div class="mode-btns">
+          <button class="mode-btn" data-mode="Daily">Daily</button>
+          <button class="mode-btn" data-mode="Weekly">Weekly</button>
+          <button class="mode-btn" data-mode="Monthly">Monthly</button>
+        </div>
+      </div>
+
+      <!-- Step 2: Sub-select (weeks for Monthly / days for Weekly) -->
+      <div id="step-sub" class="hidden">
+        <div class="notepad-header">
+          <button class="back-btn" id="back-to-mode">← Back</button>
+          <span id="step-sub-title"></span>
+          <button class="close-btn" id="notepad-close-2">✕</button>
+        </div>
+        <p class="step-hint" id="step-sub-hint"></p>
+        <div id="sub-options" class="sub-options"></div>
+      </div>
+
+      <!-- Step 3: Notepad write area -->
+      <div id="step-notes" class="hidden">
+        <div class="notepad-header">
+          <button class="back-btn" id="back-to-sub">← Back</button>
+          <span id="step-notes-title"></span>
+          <button class="close-btn" id="notepad-close-3">✕</button>
+        </div>
+        <textarea id="notepad-textarea" placeholder="Write your tasks here..."></textarea>
+        <div class="notepad-footer">
+          <button id="save-note">Save</button>
+          <span id="save-status"></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── BOTTOM NOTES ── -->
+  <footer>
+    <label for="notes">Notes</label>
+    <textarea id="notes" placeholder="Write your study notes, goals, or reminders here..."></textarea>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
